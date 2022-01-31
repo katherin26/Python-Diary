@@ -100,3 +100,55 @@ TypeError: '>' not supported between instances of 'str' and 'int'
 num = int(input("Number: "))
 
 ```
+
+# **SEQUENCES**
+
+1. One of the most powerful parts of the python language it its ability to work with sequences of data in addition to individual variables.
+
+There are several types of sequences that are similar in some ways, but different in others. When explaining those differences, we'll use the terms **mutable/immutable** and **ordered/unordered.** Mutable means that once a sequence has been defined, we can change individual elements of that sequence, and **ordered** means that the order of the objects matters.
+
+**STRINGS**
+
+**:Ordered:Yes**
+**Mutable** : No
+
+We've already looked at strings a little bit, but instead of just variables, we can think of a string as a sequence of characters. This means we can access individual elements within the string! For example:
+
+```
+name = "Harry"
+print(name[0])
+print(name[1])
+
+```
+
+prints out the first (or index-0) character in the string, which in this case happens to be H, and the prints out the second (or index-1) character, which is a.
+
+# **LIST**
+
+**:Ordered:Yes**
+**Mutable** : Yes
+
+A **Python list** allows you to store any variable types. We create a list using square brackets and commas, as shown below. Similarly to strings, we can print an entire list, or some individual elements. We can also add elements to a list using **append**, and sort a list using **sort**.
+
+```
+names = ["Harry","Ron","Hermaione"];
+
+#Print the entire list:
+
+print(names)
+
+#Print the second element of the list:
+
+print(names[1]);
+
+#Add a new name to the list:
+
+names.append("Draco")
+
+#Print the new list
+
+print(names)
+
+#Result = ['Draco','Harry','Hermaione','Ron']
+
+```
