@@ -188,3 +188,76 @@ print(s)
 
 #Find the size of the set:
 print(f"The set has {len(s)} elements.)
+
+# **DICTIONARIES**
+
+**:Ordered:No**
+**Mutable**: Yes
+
+Python Dictionaries or dict s, will be especially useful in this course. A dictionary is a set of **key-value pairs**, where each key has a corresponding value, just like in a dictionary, each word (the key) has a corresponding definition (the value). In python, we use curly brackets to contain a dictionary, and colons to indicate keys and values. For example:
+
+```
+#Define a dictionary
+houses = {"Harry": "Gryffindor", "Draco", "Slytherin"}
+
+#Print out Harry's house
+print(houses["Harry"])
+
+#Adding values to a dictionary:
+houses["Hermione"] = "Gryffindor"
+
+#Print out Hermione's House:
+print(houses["Hermione"])
+
+output =
+Gryffindor
+Gryffindor
+```
+
+# **LOOPS**
+
+Loops are an incredibly important part of any programming language, and in Python, they come in two main forms : for loops and while loops. For now, we'll focus on For Loops.
+
+1. For Loops are used to iterate a sequence of elements, performing some block of code(indented below) for each element in a sequence. For example, the following code will print out the numbers from 0 to 5.
+
+```
+for i in [0,1,2,3,4,5,6]
+    print(i)
+
+    Output = 0 1 2 3 4 5 6
+```
+
+2. We can condense this code using the python range function, which allows us to easily get a sequence of numbers. The following code gives the exact same result as our code from above:
+
+```
+for i in range(6):
+    print(i)
+
+    Output: 0 1 2 3 4 5 6
+```
+
+3. This type of loop can work for any sequence! For example, if we wish to print each name in a list, we could write the code below:
+
+```
+#Create a list
+
+names = ["Harry","Ron","Hermione"]
+
+#Print each name:
+
+for name in names:
+    print(names)
+
+    Output: Harry Ron Hermione
+
+```
+
+4. We can get even more specific if we want, and loop through each character in a single name!.
+
+```
+name = "Harry"
+for char in name:
+    print(char)
+
+    Output: H a r r y
+```
