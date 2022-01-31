@@ -13,3 +13,26 @@ Print("Hello,world!");
 
 3. Depending on how your computer is set up, you may have to type **python3** instead of python before the file name, and you may even have to download Python if you haven't already. After installing Python, we recommend that you also download Pip, as you'll need that later in the course.
 4. When you type **python file.py** in your terminal, a program called an interpreter, which you downloaded together with Python, reads through your file line by line, and executes each line of the code. This is different than languages like C or Java, which need to be compiled into machine code before they can be run.
+
+# **VARIABLES**
+
+A key part of any programming language is the ability to create manipulate variables. In order to assign a value to a variable in Python, the syntax looks like this:
+
+```
+a = 28
+b = 1.5
+c = "Hello!"
+d = True
+e = None
+```
+
+Each of these lines is taking the value to the right of the =, and storing it in the variable name to the left.
+
+Unlike in some other programming languages, Python variable types are inferred, meaning that while each variable does have a type, we do not have to explicity state which type it is when we create the variable.Some of the most common variable types are:
+
+**int:** An integer.
+**float:** A decimal number.
+**chr:** A single character.
+**str:** A string, or sequence of characters.
+**bool:** A value that is either True or False.
+**NoneType:** A special value (None) indicating the absence of a value.
