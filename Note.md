@@ -46,3 +46,24 @@ print("Hello, " + name)
 ```
 
 When run on the terminal, this is what the program looks like:
+
+```
+(base) python hello.py
+Name: Connor
+Hello: Connor
+```
+
+A couple of things to point out here:
+
+1. In the first line, instead of assigning the variable name to an explicit value, we're assigning it to whatever the **input** function returns.
+2. In the second line, we're using the **+** operator to combine, or **concatenate**, two strings. In python, the **+** operator can be used to add numbers or concatenate strings and lists.
+
+# **FORMATTING STRINGS**
+
+1. While we can use the **+** operator to combine strings as we did above, in the latest versions of pythonm there are even easier ways to work with strings, known as **formatted strings**, or **f-strings** for short.
+
+2. To indicate that we're using formatted strings, we simply add an f before the quotation marks. For example, instead of using "Hello, " + name as we did above, we could write f"Hello,{name}" for the same result. We can even plug a function into this string if we want, and turn our program above into the single line:
+
+```
+print(f"Hello, {input("Name: ")}")
+```
