@@ -36,3 +36,13 @@ Unlike in some other programming languages, Python variable types are inferred, 
 **str:** A string, or sequence of characters.
 **bool:** A value that is either True or False.
 **NoneType:** A special value (None) indicating the absence of a value.
+
+Now, we'll work on writing a more interesting program that can take input from the use and say hello to that user. To do this, we'll use another built in function called **input** which displays a prompt to the user, and returns to the user, and returns whatever the user provides as input. For example, we can write the following in a file called **name.py**:
+
+```
+name = input("Name: ")
+print("Hello, " + name)
+
+```
+
+When run on the terminal, this is what the program looks like:
