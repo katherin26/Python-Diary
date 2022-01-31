@@ -67,3 +67,36 @@ A couple of things to point out here:
 ```
 print(f"Hello, {input("Name: ")}")
 ```
+
+# **CONDITIONS**
+
+1. Just like in other programming languages, Python give us the ability to run different segments of code based on different conditions. For Example, in the program below, we'll change our output depending on the number a user types in:
+
+```
+num = input("Number: ")
+if num > 0:
+    print("Number is positive")
+elif num < 0:
+    print("Number is negative")
+else:
+    print("Number is 0")
+
+```
+
+2. Getting into how the above program works, conditionals in python contain a keyword **(if, elif, or else)** and then (except in the **else** case) a boolean expression, or an expression that evaluates to either True or False. Then, all the code we want to run if a certain expression in true is **indented** directly below the statement. Indentation is required as part of the Python syntax.
+
+3. However, when we run this program, we run into an exception that looks like this:
+
+```
+TypeError: '>' not supported between instances of 'str' and 'int'
+```
+
+4. An exception is what happens when an error occurs while we're running our python code, and over time you'll get better and better at interpreting these errors, which is a very valuable skill to have.
+5. Let's look a bit more closely at this specific exception: If we look at the bottom, we'll see that we ran into a TypeError, which generally means Python expected a certain variable to be of one type, but found it to be of another type. In this case, the exception tells us that we cannot use the > symbol to compare a str and int, and then above we can see that this comparison occurs on line 2.
+
+6. In this case, it's obvious that 0 is an integer, so it must be the case that our num variable is a string . this is happening it turns out that the input function always returns a string, and we have to specify that it should be turned into(or cast into) an integer using the int function. This means our first line would now look like:
+
+```
+num = int(input("Number: "))
+
+```
