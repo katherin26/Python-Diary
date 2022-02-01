@@ -336,3 +336,34 @@ for i in range(10):
 ```
 
 These are many built-in Python modules we can import such as math or csv that give us access to even more functions. Additionally, we can download even more Modules to access even more funcitonality! We'll spend a lot of time using the Django modulem which we'll discuss in the next lecture.
+
+# **Object-Oriented Programming**
+
+Object Oriented Programming is a programming paradigm, or a way of thinking about programming, that is centered around objects that can store information and perform actions.
+
+1. **Classes** : We've already seen a few different types of variables in python, but what if we want to create our own type?? A Python Class is esssentially a template for a new type of object that can store information and perform actions. Here's a class that defines a two-dimensional point:
+
+```
+class point():
+#A method defining how to create a point:
+
+def __init__(self,x,y):
+    self.x = x
+    self.y = y
+```
+
+2. Note that in the above code, we use the keyword self to represent the object we are currently working with. self should be the first argument for any method within a Python class.
+
+Now, let's see how we can actually use the class from above to cerate an object:
+
+```
+p = Point(2, 8)
+print(p.x)
+print(p.y)
+
+""" Output:
+2
+8
+"""
+
+```
