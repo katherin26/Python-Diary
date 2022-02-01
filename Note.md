@@ -292,4 +292,47 @@ The square of 8 is 64
 The square of 9 is 81
 ```
 
-# \*\*
+# **MODULES**
+
+As our projects get larger and larger, it will become useful to be able to write functions in one file and run them in another. IN the case above, we could create one file called functions.py with the code:
+
+```
+def square(x):
+    return x * x
+```
+
+And another file called square.py with the code:
+
+```
+for i in range(10):
+    print(f"The square of {i} is {square(i)})
+
+```
+
+However, when we try to run square.py, we run into the following error:
+
+```
+NameError: name 'square' is not defined.
+
+```
+
+We run into this problem because by defaul, Python files don't know about each otherm so we have explicitly import the square function from the functions **module** we just wrote. Now, when square.py looks like this:
+
+```
+from functions import square
+for i in range(10):
+
+    print(f"The square of {i} is {square}")
+
+```
+
+Alternatively, we can choose to import the entire functions module and the use dot notation to access the square function:
+
+```
+import functions
+
+for i in range(10):
+    print(f"The square of {i} is {functions.square(i)}")
+```
+
+These are many built-in Python modules we can import such as math or csv that give us access to even more functions. Additionally, we can download even more Modules to access even more funcitonality! We'll spend a lot of time using the Django modulem which we'll discuss in the next lecture.
