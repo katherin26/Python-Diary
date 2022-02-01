@@ -9,5 +9,5 @@
 
 ## **Using the console to modified manage.py**
 
-1. python manage.py runserver : Means go ahead and actually run this web server.
+1. **python manage.py runserver** : Means go ahead and actually run this web server.
 2. **Create a new app:** python manage.py startapp hello
