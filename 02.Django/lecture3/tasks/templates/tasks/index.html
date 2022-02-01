@@ -1,13 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Tasks</title>
-  </head>
-  <body>
-    <ul>
-      {% for task in tasks %}
-      <li>{{task}}</li>
-      {% endfor %}
-    </ul>
-  </body>
-</html>
+<!--This is template inheritance-->
+<!--We only use the html in index.html using @extends-->
+
+{% extends "tasks/layout.html" %}
+<ul>
+  {% for task in tasks %}
+  <li>{{task}}</li>
+  {% endfor %}
+</ul>
