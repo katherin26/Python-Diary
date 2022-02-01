@@ -397,3 +397,107 @@ Done with the function
 """
 
 '''
+
+# **LAMBDA FUNCTIONS**
+
+Lambda functions provide another way to create functions in python. For example, if we want to define the same square function we did earlier, we can write:
+
+'''
+square = lambda x : x \* x
+'''
+
+Where the input is to the left of the : and the output is on the right.
+
+This can be useful when we don't want to write a whole separate fucntion for a single, small use. FOr example , if we want to sort some objects where it's not clear at first how to sort them. Imagine we have a list of people, but with names and houses instead of just names that we wisth to sort:
+
+'''
+people = [
+{"name": "Harry", "house": "Gryffindor"},
+{"name": "Cho", "house": "Ravenclaw"},
+{"name": "Draco", "house": "Slytherin"}
+]
+
+people.sort()
+
+print(people)
+
+'''
+
+This,however , leaves is with the error:
+
+'''
+Not supported
+'''
+Which occurs because Python doesn’t know how to compare two Dictionaries to check if one is less than the other.
+
+We can solve this problem by including a key argument to the sort function, which specifies which part of the dictionary we wish to use to sort:
+
+'''
+people = [
+{"name": "Harry", "house": "Gryffindor"},
+{"name": "Cho", "house": "Ravenclaw"},
+{"name": "Draco", "house": "Slytherin"}
+]
+
+def f(person):
+return person["name"]
+
+people.sort(key=f)
+
+print(people)
+
+""" Output:
+[{'name': 'Cho', 'house': 'Ravenclaw'}, {'name': 'Draco', 'house': 'Slytherin'}, {'name': 'Harry', 'house': 'Gryffindor'}]
+"""
+'''
+
+While this does work, we’ve had to write an entire function that we’re only using once, we can make our code more readable by using a lambda function:
+
+'''
+people = [
+{"name": "Harry", "house": "Gryffindor"},
+{"name": "Cho", "house": "Ravenclaw"},
+{"name": "Draco", "house": "Slytherin"}
+]
+
+people.sort(key=lambda person: person["name"])
+
+print(people)
+
+""" Output:
+[{'name': 'Cho', 'house': 'Ravenclaw'}, {'name': 'Draco', 'house': 'Slytherin'}, {'name': 'Harry', 'house': 'Gryffindor'}]
+"""
+'''
+
+**EXCEPTIONS**
+
+During this lecture, we’ve run into a few different exceptions, so now we’ll look into some new ways of dealing with them.
+
+In the following chunk of code, we’ll take two integers from the user, and attempt to divide them:
+
+'''
+x = int(input("x: "))
+y = int(input("y: "))
+
+result = x / y
+
+print(f"{x} / {y} = {result}")
+
+'''
+In many cases, this program works well:
+
+'''
+x: 5
+y: 10
+5 / 10 = 0.5
+'''
+
+However, we’ll run into problems when we attempt to divide by 0:
+
+'''
+x: 5
+y: 0
+
+'''
+
+We can deal with this messy error using Exception Handling. In the following block of code, we will try to divide the two numbers, except when we get a ZeroDivisionError:
